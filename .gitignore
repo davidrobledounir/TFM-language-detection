@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Datos, ejecuciones y logs (no se redistribuyen)
+data/
+*.log
+
+# Variables de entorno y secretos
+.env
+.env.*
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

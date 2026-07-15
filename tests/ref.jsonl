@@ -1,0 +1,2 @@
+{"id": "a", "text": "hola mundo", "segments": [{"start": 0.0, "end": 1.0, "lang": "spa"}, {"start": 1.0, "end": 2.0, "lang": "cat"}]}
+{"id": "b", "text": "kaixo", "segments": [{"start": 0.0, "end": 1.0, "lang": "eus"}]}

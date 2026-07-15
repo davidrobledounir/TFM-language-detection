@@ -1,0 +1,13 @@
+audio:
+  sample_rate: 16000
+  rms_target_dbfs: -20.0
+
+asr:
+  model_size: medium
+  compute_type_gpu: float16
+  compute_type_cpu: int8
+  beam_size: 1
+  language: null
+  condition_on_previous_text: false
+
+seed: 1337

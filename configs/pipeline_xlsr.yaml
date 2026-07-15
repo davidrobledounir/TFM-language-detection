@@ -1,0 +1,45 @@
+audio:
+  sample_rate: 16000
+  rms_target_dbfs: -20.0
+
+segmentation:
+  vad:
+    backend: auto
+    threshold: 0.5
+    min_speech_ms: 250
+    min_silence_ms: 200
+  window:
+    min_s: 3.0
+    max_s: 30.0
+    target_s: 4.0
+  refine:
+    enabled: true
+    min_confidence: 0.6
+    min_margin: 0.15
+    min_refined_s: 1.0
+
+lid:
+  backend: xlsr
+  model_id: facebook/wav2vec2-xls-r-300m-21-to-en
+  languages: [spa, eus]
+  smoothing:
+    window: 1
+    hysteresis: 0.05
+
+asr:
+  model_size: large-v3
+  compute_type_gpu: float16
+  compute_type_cpu: int8
+  beam_size: 1
+  condition_on_previous_text: false
+
+postprocess:
+  merge_consecutive_same_lang: true
+  emit_nonspeech: false
+
+evaluation:
+  bootstrap:
+    n: 1000
+    alpha: 0.05
+
+seed: 1337
